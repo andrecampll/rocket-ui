@@ -7,4 +7,3 @@
 - [ ] Textarea
 - [ ] Checkbox
 - [ ] Avatar
-- [ ] MultiStep
