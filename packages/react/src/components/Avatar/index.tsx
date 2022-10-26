@@ -13,3 +13,5 @@ export const Avatar = (props: AvatarProps) => (
     </S.AvatarFallback>
   </S.Wrapper>
 )
+
+Avatar.displayName = 'Avatar'

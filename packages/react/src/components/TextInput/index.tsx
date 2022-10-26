@@ -11,3 +11,5 @@ export const TextInput = ({ prefix, ...props }: TextInputProps) => (
     <S.Input {...props} />
   </S.Wrapper>
 )
+
+TextInput.displayName = 'TextInput'

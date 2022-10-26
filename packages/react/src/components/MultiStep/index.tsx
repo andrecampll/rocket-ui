@@ -18,3 +18,5 @@ export const MultiStep = ({ size, currentStep = 1 }: MultiStepProps) => (
     </S.Steps>
   </S.Wrapper>
 )
+
+MultiStep.displayName = 'MultiStep'
