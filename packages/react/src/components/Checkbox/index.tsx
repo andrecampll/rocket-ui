@@ -12,3 +12,5 @@ export const Checkbox = (props: CheckboxProps) => (
     </S.Indicator>
   </S.Wrapper>
 )
+
+Checkbox.displayName = 'Checkbox'
