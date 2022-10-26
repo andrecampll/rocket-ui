@@ -9,6 +9,13 @@ export default {
     src: 'https://i.pinimg.com/564x/86/2c/e2/862ce2907b6220ff9614cff0673a6791.jpg',
     alt: 'Avatar',
   },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
