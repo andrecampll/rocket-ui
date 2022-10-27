@@ -15,4 +15,6 @@ export const colors = {
   primary500: '#602ADF',
   primary700: '#481BB1',
   primary900: '#220F57',
+
+  test100: '#FFF'
 }
