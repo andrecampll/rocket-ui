@@ -1,12 +1,14 @@
 import { ComponentProps } from 'react'
 import * as S from './styles'
 
-export type TextInputProps = {
+export interface TextInputProps
+  extends Omit<ComponentProps<typeof S.Input>, 'size'> {
   prefix?: string
-} & ComponentProps<typeof S.Input>
+  size?: ComponentProps<typeof S.Wrapper>['size']
+}
 
-export const TextInput = ({ prefix, ...props }: TextInputProps) => (
-  <S.Wrapper>
+export const TextInput = ({ prefix, size, ...props }: TextInputProps) => (
+  <S.Wrapper size={size}>
     {!!prefix && <S.Prefix>{prefix}</S.Prefix>}
     <S.Input {...props} />
   </S.Wrapper>

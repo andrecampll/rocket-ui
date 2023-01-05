@@ -7,7 +7,18 @@ export const Wrapper = styled('div', {
   boxSizing: 'border-box',
   border: '2px solid $gray900',
   display: 'flex',
-  alignItems: 'baseline',
+  alignItems: 'center',
+
+  variants: {
+    size: {
+      sm: {
+        padding: '$2 $3',
+      },
+      md: {
+        padding: '$3 $4',
+      },
+    },
+  },
 
   '&:has(input:focus)': {
     borderColor: '$primary300',
@@ -16,6 +27,10 @@ export const Wrapper = styled('div', {
   '&:has(input:disabled)': {
     opacity: 0.5,
     cursor: 'not-allowed',
+  },
+
+  defaultVariants: {
+    size: 'md',
   },
 })
 
@@ -43,7 +58,7 @@ export const Input = styled('input', {
     cursor: 'not-allowed',
   },
 
-  '&:placeholder': {
-    color: '$gray400',
+  '&::placeholder': {
+    color: '$gray500',
   },
 })

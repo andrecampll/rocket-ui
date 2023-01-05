@@ -5,8 +5,8 @@ import { styled } from '../../styles'
 export const Wrapper = styled(Avatar.Root, {
   borderRadius: '$full',
   display: 'inline-block',
-  width: '$12',
-  height: '$12',
+  width: '$16',
+  height: '$16',
   overflow: 'hidden',
 })
 
