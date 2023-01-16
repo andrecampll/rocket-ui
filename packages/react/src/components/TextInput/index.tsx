@@ -1,4 +1,5 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, forwardRef } from 'react'
+
 import * as S from './styles'
 
 export interface TextInputProps
@@ -7,11 +8,15 @@ export interface TextInputProps
   size?: ComponentProps<typeof S.Wrapper>['size']
 }
 
-export const TextInput = ({ prefix, size, ...props }: TextInputProps) => (
-  <S.Wrapper size={size}>
-    {!!prefix && <S.Prefix>{prefix}</S.Prefix>}
-    <S.Input {...props} />
-  </S.Wrapper>
+export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
+  ({ prefix, size, ...props }: TextInputProps, ref) => {
+    return (
+      <S.Wrapper size={size}>
+        {!!prefix && <S.Prefix>{prefix}</S.Prefix>}
+        <S.Input ref={ref} {...props} />
+      </S.Wrapper>
+    )
+  },
 )
 
 TextInput.displayName = 'TextInput'
